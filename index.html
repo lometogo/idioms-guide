@@ -1,131 +1,469 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Idioms & Special Phrases Explained</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Business Idioms &amp; Phrasal Verbs</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
             font-family: 'Segoe UI', Roboto, Arial, sans-serif;
-            max-width: 800px;
+            max-width: 900px;
             margin: 40px auto;
-            padding: 0 20px;
-            background: #f9fafb;
-            color: #1e293b;
-            line-height: 1.7;
+            padding: 0 25px;
+            background: #f8fafc;
+            color: #0b1e33;
+            line-height: 1.8;
         }
         h1 {
-            font-size: 1.8rem;
-            border-bottom: 3px solid #3b82f6;
-            padding-bottom: 10px;
-            color: #0f172a;
+            font-size: 2rem;
+            border-bottom: 4px solid #1e4a7a;
+            padding-bottom: 12px;
+            margin-bottom: 28px;
+            color: #0a1e33;
         }
-        .card {
+        .body-text {
             background: white;
-            border-radius: 12px;
-            padding: 18px 22px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-            border-left: 5px solid #3b82f6;
+            padding: 30px 32px;
+            border-radius: 16px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+            margin-bottom: 40px;
+            font-size: 1.05rem;
         }
-        .phrase {
+        .body-text p {
+            margin-bottom: 1.2rem;
+        }
+        .body-text strong {
+            color: #0a4b7a;
             font-weight: 700;
-            color: #1e40af;
-            font-size: 1.1rem;
         }
-        .explanation {
-            margin-top: 6px;
-            color: #334155;
-        }
-        .badge {
-            display: inline-block;
-            background: #dbeafe;
-            color: #1e40af;
-            font-size: 0.75rem;
+        .body-text sup a {
+            color: #0a4b7a;
+            text-decoration: none;
             font-weight: 600;
-            padding: 2px 10px;
-            border-radius: 20px;
-            margin-left: 10px;
-            letter-spacing: 0.3px;
+            margin-left: 1px;
         }
-        footer {
-            margin-top: 30px;
+        .body-text sup a:hover {
+            text-decoration: underline;
+        }
+        .footnotes {
+            background: white;
+            padding: 25px 32px 20px;
+            border-radius: 16px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+            border-top: 4px solid #1e4a7a;
+        }
+        .footnotes h2 {
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+            color: #0a1e33;
+        }
+        .footnotes ol {
+            padding-left: 24px;
+            list-style-type: decimal;
+        }
+        .footnotes li {
+            margin-bottom: 18px;
+            padding-left: 6px;
+            font-size: 0.98rem;
+            border-bottom: 1px solid #ecf1f7;
+            padding-bottom: 16px;
+        }
+        .footnotes li:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+        .footnotes li strong {
+            color: #0a4b7a;
+        }
+        .footnotes .pronounce {
+            color: #3b5f7a;
+            font-style: italic;
+            margin-left: 6px;
+            font-weight: 400;
+        }
+        .footnotes .def {
+            display: block;
+            margin-top: 3px;
+            color: #1f3a57;
+        }
+        .footnotes .syn {
+            display: block;
+            margin-top: 2px;
+            color: #1f3a57;
+        }
+        .footnotes .syn strong {
+            color: #0f4b6b;
+        }
+        .footnotes .example {
+            display: block;
+            margin-top: 4px;
+            color: #1f3a57;
+            font-style: italic;
+            background: #f2f6fc;
+            padding: 6px 14px;
+            border-radius: 8px;
+        }
+        .footnotes .back-link {
+            margin-left: 12px;
             font-size: 0.9rem;
-            color: #64748b;
-            text-align: center;
-            border-top: 1px solid #e2e8f0;
-            padding-top: 18px;
+        }
+        .footnotes .back-link a {
+            color: #1e4a7a;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .footnotes .back-link a:hover {
+            text-decoration: underline;
+        }
+        hr {
+            margin: 30px 0 10px;
+            border: 0;
+            border-top: 2px dashed #dce4ed;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 0 12px;
+                margin: 20px auto;
+            }
+            .body-text {
+                padding: 18px 16px;
+            }
+            .footnotes {
+                padding: 18px 16px 14px;
+            }
+            .footnotes ol {
+                padding-left: 18px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <h1>📖 Idioms & Special Phrases — Plain-English Guide</h1>
-    <p style="color: #475569; margin-bottom: 30px;">Written for a high school freshman. No jargon, no fluff.</p>
+    <h1>📘 Business Idioms &amp; Phrasal Verbs</h1>
 
-    <!-- 1 -->
-    <div class="card">
-        <div class="phrase">"the lead engineer" <span class="badge">metaphor</span></div>
-        <div class="explanation">This just means the main AI acts like a boss who hands out tasks. It's not a real idiom, just a way to make the tech sound more human. The main AI runs the whole project, and subagents are like specialists it brings in when it needs help with something specific.</div>
+    <!-- ========== BODY TEXT ========== -->
+    <div class="body-text">
+
+        <p>
+            I have a good, but stressful and time‑consuming career in widget‑making professional services and I'm
+            <strong id="ref-1">dreaming of going independent<sup><a href="#fn-1">¹</a></sup></strong> as a freelance consultant
+            for widget makers. My
+            <strong id="ref-2">betters<sup><a href="#fn-2">²</a></sup></strong> suggest that before I
+            <strong id="ref-3">leave my current job<sup><a href="#fn-3">³</a></sup></strong>, I should first
+            <strong id="ref-4">build up<sup><a href="#fn-4">⁴</a></sup></strong> a couple of clients with smaller engagements
+            <strong id="ref-5">on the side<sup><a href="#fn-5">⁵</a></sup></strong>. I've never held anything but W‑2 roles, so
+            I'd love the
+            <strong id="ref-6">hivemind's<sup><a href="#fn-6">⁶</a></sup></strong> expertise on
+            <strong id="ref-7">setting myself up for success<sup><a href="#fn-7">⁷</a></sup></strong> as a
+            <strong id="ref-8">salaryman<sup><a href="#fn-8">⁸</a></sup></strong> transitioning into freelancer.
+            <strong id="ref-9">Snowflakes inside.<sup><a href="#fn-9">⁹</a></sup></strong>
+        </p>
+
+        <p>
+            I've been in my industry for 10+ years and people occasionally ask if I'd freelance for them.
+            Until now I've always said no, because I have a job that takes &gt;60hrs a week and compensates me
+            fine for that effort.
+        </p>
+
+        <p>
+            Now, I'm nearly ready to
+            <strong id="ref-10">go it alone<sup><a href="#fn-10">¹⁰</a></sup></strong>. It sounds like I should
+            <strong id="ref-11">take on<sup><a href="#fn-11">¹¹</a></sup></strong> a couple of smaller 5‑10hr a week
+            engagements so that
+            <strong id="ref-12">when/if<sup><a href="#fn-12">¹²</a></sup></strong> I
+            <strong id="ref-3b">leave my current job<sup><a href="#fn-3">³</a></sup></strong> I don't have to
+            <strong id="ref-13">start from zero<sup><a href="#fn-13">¹³</a></sup></strong>.
+        </p>
+
+        <p>
+            I'd love advice for most anything about making the transition successfully, from how to
+            <strong id="ref-14">set up<sup><a href="#fn-14">¹⁴</a></sup></strong> a US business for tax purposes, to
+            <strong id="ref-15">slyly accepting<sup><a href="#fn-15">¹⁵</a></sup></strong> engagements without
+            <strong id="ref-16">ruffling the feathers<sup><a href="#fn-16">¹⁶</a></sup></strong> of my primary job, to the
+            freelancer tricks you use to
+            <strong id="ref-17">succeed<sup><a href="#fn-17">¹⁷</a></sup></strong> in the
+            <strong id="ref-18">early phases<sup><a href="#fn-18">¹⁸</a></sup></strong>.
+        </p>
+
+        <p>
+            If
+            <strong id="ref-19">all goes well<sup><a href="#fn-19">¹⁹</a></sup></strong>, in the next 3‑9 months I would like
+            to be freelancing full time. Perhaps
+            <strong id="ref-20">naively<sup><a href="#fn-20">²⁰</a></sup></strong>, I feel pretty good about my ability to
+            <strong id="ref-21">operate<sup><a href="#fn-21">²¹</a></sup></strong> as a fulltime freelancer (find clients,
+            <strong id="ref-22">negotiate<sup><a href="#fn-22">²²</a></sup></strong> a reasonable scope, do good work for them,
+            <strong id="ref-23">invoice<sup><a href="#fn-23">²³</a></sup></strong> them correctly, etc.), but less confident
+            in my ability to
+            <strong id="ref-24">navigate<sup><a href="#fn-24">²⁴</a></sup></strong> and
+            <strong id="ref-21b">operate<sup><a href="#fn-21">²¹</a></sup></strong> while
+            <strong id="ref-25">maintaining<sup><a href="#fn-25">²⁵</a></sup></strong> my full time role. Any and all advice is
+            appreciated!
+        </p>
+
     </div>
 
-    <!-- 2 -->
-    <div class="card">
-        <div class="phrase">"pulls in" <span class="badge">phrasal verb</span></div>
-        <div class="explanation">Means <em>brings in temporarily</em>. Like when a teacher asks a student who's good at math to help the group for a few minutes, then that student goes back to their own work. Subagents are only around for one job, then they're done.</div>
-    </div>
+    <!-- ========== FOOTNOTES ========== -->
+    <div class="footnotes">
+        <h2>📝 Footnotes</h2>
+        <ol>
 
-    <!-- 3 -->
-    <div class="card">
-        <div class="phrase">"starts fresh" <span class="badge">idiom</span></div>
-        <div class="explanation">Means <em>begins with nothing from before</em> — like a blank sheet of paper. The subagent doesn't carry over all the chat history from the main agent, so it doesn't waste memory on stuff that doesn't matter to its one task.</div>
-    </div>
+            <!-- 1 -->
+            <li id="fn-1">
+                <strong>dreaming of going independent</strong>
+                <span class="pronounce">(DREE-ming uv GOH-ing in-dee-PEN-dent)</span>
+                <span class="def">Imagining or planning to leave a job and work for oneself as a freelancer or business owner.</span>
+                <span class="syn"><strong>Synonyms:</strong> <strong>aspiring to</strong>, <strong>envisioning</strong></span>
+                <span class="example"><em>Example:</em> She's been dreaming of going independent for years, and now she's finally saving up to do it.</span>
+                <span class="back-link"><a href="#ref-1">↩ back to text</a></span>
+            </li>
 
-    <!-- 4 -->
-    <div class="card">
-        <div class="phrase">"fills up with" <span class="badge">metaphor</span></div>
-        <div class="explanation">Means <em>gets totally loaded with</em>. Think of your phone's storage — if you save too many photos, it fills up and you can't take more. Same idea here: if the main agent kept all the subagent's work, its memory would get clogged.</div>
-    </div>
+            <!-- 2 -->
+            <li id="fn-2">
+                <strong>betters</strong>
+                <span class="pronounce">(BET-erz)</span>
+                <span class="def">People who are more experienced, older, or in a higher position than you; superiors.</span>
+                <span class="syn"><strong>Synonyms:</strong> <strong>superiors</strong>, <strong>elders</strong></span>
+                <span class="example"><em>Example:</em> My betters at the firm advised me to wait before asking for a promotion.</span>
+                <span class="back-link"><a href="#ref-2">↩ back to text</a></span>
+            </li>
 
-    <!-- 5 -->
-    <div class="card">
-        <div class="phrase">"hunts security holes" <span class="badge">metaphor</span></div>
-        <div class="explanation">Means <em>looks really carefully for weak spots</em> in the code. Like a detective searching for clues. "Holes" are vulnerabilities that hackers could sneak through. The reviewer subagent's whole job is to find them before anyone else does.</div>
-    </div>
+            <!-- 3 -->
+            <li id="fn-3">
+                <strong>leave my current job</strong>
+                <span class="pronounce">(LEEV my KUR-ent job)</span>
+                <span class="def">To quit or resign from the position you are in right now.</span>
+                <span class="syn"><strong>Synonyms:</strong> <strong>quit</strong>, <strong>resign from</strong></span>
+                <span class="example"><em>Example:</em> Before I leave my current job, I want to make sure I have another offer lined up.</span>
+                <span class="back-link"><a href="#ref-3">↩ back to text</a></span>
+            </li>
 
-    <!-- 6 -->
-    <div class="card">
-        <div class="phrase">"just enough shell access" <span class="badge">principle phrase</span></div>
-        <div class="explanation">Means <em>the absolute minimum permission needed</em> — and nothing extra. Like giving someone a key to the supply closet but not to the main office. The test runner can run tests, but it can't delete files or change settings it shouldn't touch.</div>
-    </div>
+            <!-- 4 -->
+            <li id="fn-4">
+                <strong>build up</strong>
+                <span class="pronounce">(BILD up)</span>
+                <span class="def">To gradually develop or increase something over time.</span>
+                <span class="syn"><strong>Synonyms:</strong> <strong>develop</strong>, <strong>accumulate</strong></span>
+                <span class="example"><em>Example:</em> He's trying to build up his client base before leaving his full-time job.</span>
+                <span class="back-link"><a href="#ref-4">↩ back to text</a></span>
+            </li>
 
-    <!-- 7 -->
-    <div class="card">
-        <div class="phrase">"That's the conceptual floor" <span class="badge">metaphor</span></div>
-        <div class="explanation">Means <em>this is the very basic starting point</em>. Think of a building — the floor is where you stand to begin with. The author is saying, "This is the minimum you need to know before we go further up (or deeper) into the details."</div>
-    </div>
+            <!-- 5 -->
+            <li id="fn-5">
+                <strong>on the side</strong>
+                <span class="pronounce">(on thuh SIDE)</span>
+                <span class="def">In addition to one's main job or activity; as a secondary pursuit.</span>
+                <span class="syn"><strong>Synonyms:</strong> <strong>in addition</strong>, <strong>as a sideline</strong></span>
+                <span class="example"><em>Example:</em> She does freelance consulting on the side while working her 9-to-5 job.</span>
+                <span class="back-link"><a href="#ref-5">↩ back to text</a></span>
+            </li>
 
-    <!-- 8 -->
-    <div class="card">
-        <div class="phrase">"goes deeper on the why" <span class="badge">common phrase</span></div>
-        <div class="explanation">Means <em>explains the reasons more thoroughly</em>. "The why" is just shorthand for <em>the purpose or reasoning</em> behind something. It's the difference between telling you <em>what</em> to do and telling you <em>why</em> it matters.</div>
-    </div>
+            <!-- 6 -->
+            <li id="fn-6">
+                <strong>hivemind</strong>
+                <span class="pronounce">(HIV-mynd)</span>
+                <span class="def">A collective intelligence or shared knowledge of a group; the combined wisdom of many people.</span>
+                <span class="syn"><strong>Synonyms:</strong> <strong>collective wisdom</strong>, <strong>crowd intelligence</strong></span>
+                <span class="example"><em>Example:</em> I asked the hivemind on the forum for advice on starting my own business.</span>
+                <span class="back-link"><a href="#ref-6">↩ back to text</a></span>
+            </li>
 
-    <!-- 9 -->
-    <div class="card">
-        <div class="phrase">"the rest of this guide is about building them" <span class="badge">roadmap phrase</span></div>
-        <div class="explanation">Not really an idiom — it's just the author telling you what's coming next. Think of it as a signpost that says, "Now we move from theory to hands-on stuff."</div>
-    </div>
+            <!-- 7 -->
+            <li id="fn-7">
+                <strong>setting myself up for success</strong>
+                <span class="pronounce">(SET-ing my-SELF up for suk-SES)</span>
+                <span class="def">Preparing and organizing things so that one is likely to achieve a good outcome.</span>
+                <span class="syn"><strong>Synonyms:</strong> <strong>positioning myself</strong>, <strong>preparing</strong></span>
+                <span class="example"><em>Example:</em> By saving money and building skills now, I'm setting myself up for success when I go freelance.</span>
+                <span class="back-link"><a href="#ref-7">↩ back to text</a></span>
+            </li>
 
-    <!-- 10 -->
-    <div class="card">
-        <div class="phrase">"applied at the level of individual tasks" <span class="badge">technical phrasing</span></div>
-        <div class="explanation">Means <em>used for each single, separate job</em>. The same basic setup (an AI with its own instructions and tools) that works for the main agent is also used for each subagent, but scaled down to just one specific job at a time.</div>
-    </div>
+            <!-- 8 -->
+            <li id="fn-8">
+                <strong>salaryman</strong>
+                <span class="pronounce">(SAL-uh-ree-man)</span>
+                <span class="def">A Japanese term for a white-collar office worker who is loyal to their company; often used more broadly for any full-time corporate employee.</span>
+                <span class="syn"><strong>Synonyms:</strong> <strong>corporate employee</strong>, <strong>company man</strong></span>
+                <span class="example"><em>Example:</em> After 15 years as a salaryman, he decided to quit and start his own business.</span>
+                <span class="back-link"><a href="#ref-8">↩ back to text</a></span>
+            </li>
 
-    <footer>
-        Made simple for high schoolers — no dictionary required.
-    </footer>
+            <!-- 9 -->
+            <li id="fn-9">
+                <strong>Snowflakes inside</strong>
+                <span class="pronounce">(SNOH-flayks in-SYDE)</span>
+                <span class="def">A playful or self‑deprecating phrase meaning "special circumstances" or "things that are not obvious from the outside."</span>
+                <span class="syn"><strong>Synonyms:</strong> <strong>context matters</strong>, <strong>unique situation</strong></span>
+                <span class="example"><em>Example:</em> I know it sounds simple, but snowflakes inside — every case is different.</span>
+                <span class="back-link"><a href="#ref-9">↩ back to text</a></span>
+            </li>
+
+            <!-- 10 -->
+            <li id="fn-10">
+                <strong>go it alone</strong>
+                <span class="pronounce">(GOH it uh-LONE)</span>
+                <span class="def">To do something without help from others; to start a business or project independently.</span>
+                <span class="syn"><strong>Synonyms:</strong> <strong>solo</strong>, <strong>fly solo</strong></span>
+                <span class="example"><em>Example:</em> After years of working for others, he's finally ready to go it alone as a freelancer.</span>
+                <span class="back-link"><a href="#ref-10">↩ back to text</a></span>
+            </li>
+
+            <!-- 11 -->
+            <li id="fn-11">
+                <strong>take on</strong>
+                <span class="pronounce">(TAYK on)</span>
+                <span class="def">To accept or agree to do something; to assume responsibility for a task.</span>
+                <span class="syn"><strong>Synonyms:</strong> <strong>accept</strong>, <strong>undertake</strong></span>
+                <span class="example"><em>Example:</em> I'm not ready to take on a big project yet — I'll start with small ones.</span>
+                <span class="back-link"><a href="#ref-11">↩ back to text</a></span>
+            </li>
+
+            <!-- 12 -->
+            <li id="fn-12">
+                <strong>when/if</strong>
+                <span class="pronounce">(WEN if)</span>
+                <span class="def">A cautious way of saying "if and when" — used when something is possible but not certain.</span>
+                <span class="syn"><strong>Synonyms:</strong> <strong>if and when</strong>, <strong>should</strong></span>
+                <span class="example"><em>Example:</em> When/if I get the promotion, I'll have to move to a new city.</span>
+                <span class="back-link"><a href="#ref-12">↩ back to text</a></span>
+            </li>
+
+            <!-- 13 -->
+            <li id="fn-13">
+                <strong>start from zero</strong>
+                <span class="pronounce">(START from ZEE-roh)</span>
+                <span class="def">To begin with nothing; to have no existing clients, resources, or advantages.</span>
+                <span class="syn"><strong>Synonyms:</strong> <strong>from scratch</strong>, <strong>from the ground up</strong></span>
+                <span class="example"><em>Example:</em> I don't want to start from zero when I leave my job — that's why I'm building clients now.</span>
+                <span class="back-link"><a href="#ref-13">↩ back to text</a></span>
+            </li>
+
+            <!-- 14 -->
+            <li id="fn-14">
+                <strong>set up</strong>
+                <span class="pronounce">(SET up)</span>
+                <span class="def">To establish or arrange something, like a business, system, or process.</span>
+                <span class="syn"><strong>Synonyms:</strong> <strong>establish</strong>, <strong>arrange</strong></span>
+                <span class="example"><em>Example:</em> I need to set up my LLC before I can start invoicing clients.</span>
+                <span class="back-link"><a href="#ref-14">↩ back to text</a></span>
+            </li>
+
+            <!-- 15 -->
+            <li id="fn-15">
+                <strong>slyly accepting</strong>
+                <span class="pronounce">(SLY-lee ak-SEP-ting)</span>
+                <span class="def">Taking on work in a quiet, discreet way — often without making it obvious to your employer.</span>
+                <span class="syn"><strong>Synonyms:</strong> <strong>quietly taking</strong>, <strong>discreetly agreeing</strong></span>
+                <span class="example"><em>Example:</em> He's slyly accepting small freelance gigs while still working his day job.</span>
+                <span class="back-link"><a href="#ref-15">↩ back to text</a></span>
+            </li>
+
+            <!-- 16 -->
+            <li id="fn-16">
+                <strong>ruffling the feathers</strong>
+                <span class="pronounce">(RUF-ling thuh FETH-erz)</span>
+                <span class="def">To upset, annoy, or disturb someone — especially those in authority.</span>
+                <span class="syn"><strong>Synonyms:</strong> <strong>upsetting</strong>, <strong>irritating</strong></span>
+                <span class="example"><em>Example:</em> I don't want to ruffle the feathers of my boss by asking for time off to freelance.</span>
+                <span class="back-link"><a href="#ref-16">↩ back to text</a></span>
+            </li>
+
+            <!-- 17 -->
+            <li id="fn-17">
+                <strong>succeed</strong>
+                <span class="pronounce">(suk-SEED)</span>
+                <span class="def">To achieve a goal or get the desired result.</span>
+                <span class="syn"><strong>Synonyms:</strong> <strong>prosper</strong>, <strong>thrive</strong></span>
+                <span class="example"><em>Example:</em> To succeed as a freelancer, you need good clients and steady work.</span>
+                <span class="back-link"><a href="#ref-17">↩ back to text</a></span>
+            </li>
+
+            <!-- 18 -->
+            <li id="fn-18">
+                <strong>early phases</strong>
+                <span class="pronounce">(ER-lee FAYZ-ez)</span>
+                <span class="def">The first stages of a process or period of time.</span>
+                <span class="syn"><strong>Synonyms:</strong> <strong>initial stages</strong>, <strong>beginning</strong></span>
+                <span class="example"><em>Example:</em> In the early phases of freelancing, you have to accept lower-paying work to build a portfolio.</span>
+                <span class="back-link"><a href="#ref-18">↩ back to text</a></span>
+            </li>
+
+            <!-- 19 -->
+            <li id="fn-19">
+                <strong>all goes well</strong>
+                <span class="pronounce">(awl GOHZ wel)</span>
+                <span class="def">If everything happens as planned; if there are no problems.</span>
+                <span class="syn"><strong>Synonyms:</strong> <strong>if everything works out</strong>, <strong>best case</strong></span>
+                <span class="example"><em>Example:</em> If all goes well, I'll be freelancing full-time by next summer.</span>
+                <span class="back-link"><a href="#ref-19">↩ back to text</a></span>
+            </li>
+
+            <!-- 20 -->
+            <li id="fn-20">
+                <strong>naively</strong>
+                <span class="pronounce">(nah-EEV-lee)</span>
+                <span class="def">In a way that shows a lack of experience or practical knowledge; too optimistic.</span>
+                <span class="syn"><strong>Synonyms:</strong> <strong>optimistically</strong>, <strong>idealistically</strong></span>
+                <span class="example"><em>Example:</em> Naively, I thought freelancing would be easy — now I know it takes hard work.</span>
+                <span class="back-link"><a href="#ref-20">↩ back to text</a></span>
+            </li>
+
+            <!-- 21 -->
+            <li id="fn-21">
+                <strong>operate</strong>
+                <span class="pronounce">(OP-er-ayt)</span>
+                <span class="def">To function or work in a particular way; to carry on business activities.</span>
+                <span class="syn"><strong>Synonyms:</strong> <strong>function</strong>, <strong>run</strong></span>
+                <span class="example"><em>Example:</em> She's learned how to operate as a freelancer without losing her work-life balance.</span>
+                <span class="back-link"><a href="#ref-21">↩ back to text</a></span>
+            </li>
+
+            <!-- 22 -->
+            <li id="fn-22">
+                <strong>negotiate</strong>
+                <span class="pronounce">(ne-GOH-shee-ayt)</span>
+                <span class="def">To discuss terms and reach an agreement, especially about price or conditions.</span>
+                <span class="syn"><strong>Synonyms:</strong> <strong>bargain</strong>, <strong>haggle</strong></span>
+                <span class="example"><em>Example:</em> You should always negotiate your rates before signing a contract.</span>
+                <span class="back-link"><a href="#ref-22">↩ back to text</a></span>
+            </li>
+
+            <!-- 23 -->
+            <li id="fn-23">
+                <strong>invoice</strong>
+                <span class="pronounce">(IN-vois)</span>
+                <span class="def">To send a bill to a client for work done; also used as a noun for the bill itself.</span>
+                <span class="syn"><strong>Synonyms:</strong> <strong>bill</strong>, <strong>charge</strong></span>
+                <span class="example"><em>Example:</em> I invoice my clients at the end of every month for the work I've done.</span>
+                <span class="back-link"><a href="#ref-23">↩ back to text</a></span>
+            </li>
+
+            <!-- 24 -->
+            <li id="fn-24">
+                <strong>navigate</strong>
+                <span class="pronounce">(NAV-ih-gayt)</span>
+                <span class="def">To carefully manage or steer through a complex or difficult situation.</span>
+                <span class="syn"><strong>Synonyms:</strong> <strong>steer</strong>, <strong>maneuver</strong></span>
+                <span class="example"><em>Example:</em> He's good at navigating tricky conversations with difficult clients.</span>
+                <span class="back-link"><a href="#ref-24">↩ back to text</a></span>
+            </li>
+
+            <!-- 25 -->
+            <li id="fn-25">
+                <strong>maintaining</strong>
+                <span class="pronounce">(mayn-TAY-ning)</span>
+                <span class="def">Keeping something in good condition; continuing to manage or preserve something.</span>
+                <span class="syn"><strong>Synonyms:</strong> <strong>sustaining</strong>, <strong>keeping up</strong></span>
+                <span class="example"><em>Example:</em> Maintaining a full-time job while freelancing on the side is a real challenge.</span>
+                <span class="back-link"><a href="#ref-25">↩ back to text</a></span>
+            </li>
+
+        </ol>
+    </div>
 
 </body>
 </html>
