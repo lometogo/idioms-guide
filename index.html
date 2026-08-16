@@ -3,39 +3,82 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Business Idioms &amp; Phrasal Verbs</title>
+    <title>Business English: Register &amp; Word Choice</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
             font-family: 'Segoe UI', Roboto, Arial, sans-serif;
-            max-width: 900px;
+            max-width: 960px;
             margin: 40px auto;
             padding: 0 25px;
-            background: #f8fafc;
+            background: linear-gradient(145deg, #f0f4f9 0%, #e6edf5 100%);
             color: #0b1e33;
             line-height: 1.8;
+            min-height: 100vh;
         }
-        h1 {
-            font-size: 2rem;
-            border-bottom: 4px solid #1e4a7a;
-            padding-bottom: 12px;
-            margin-bottom: 28px;
-            color: #0a1e33;
+
+        /* ---- HEADER ---- */
+        .page-header {
+            background: #0a2a44;
+            color: white;
+            padding: 28px 36px 22px;
+            border-radius: 18px 18px 0 0;
+            margin-bottom: 0;
+            box-shadow: 0 4px 16px rgba(10, 42, 68, 0.20);
+            border-bottom: 6px solid #f5b041;
         }
+        .page-header h1 {
+            font-size: 2.1rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin: 0;
+        }
+        .page-header .subhead {
+            font-size: 1rem;
+            color: #bfd7f0;
+            margin-top: 6px;
+            font-weight: 400;
+            letter-spacing: 0.3px;
+        }
+        .page-header .context-note {
+            font-size: 0.95rem;
+            color: #d4e4f5;
+            margin-top: 12px;
+            padding: 12px 18px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 10px;
+            border-left: 4px solid #f5b041;
+        }
+
+        /* ---- BODY TEXT ---- */
         .body-text {
-            background: white;
-            padding: 30px 32px;
-            border-radius: 16px;
-            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
-            margin-bottom: 40px;
+            background: #ffffff;
+            padding: 34px 38px;
+            border-radius: 0 0 18px 18px;
+            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.06);
+            margin-bottom: 44px;
             font-size: 1.05rem;
+            border-left: 2px solid #dce5ef;
+            border-right: 2px solid #dce5ef;
+            border-bottom: 2px solid #dce5ef;
+        }
+        .body-text .article-meta {
+            font-size: 0.85rem;
+            color: #6f8aa5;
+            border-bottom: 1px solid #e8eef5;
+            padding-bottom: 12px;
+            margin-bottom: 18px;
         }
         .body-text p {
-            margin-bottom: 1.2rem;
+            margin-bottom: 1.3rem;
+        }
+        .body-text p:last-child {
+            margin-bottom: 0;
         }
         .body-text strong {
             color: #0a4b7a;
@@ -44,38 +87,50 @@
         .body-text sup a {
             color: #0a4b7a;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 700;
             margin-left: 1px;
+            font-size: 0.8rem;
+            background: #e3ecf5;
+            padding: 0 5px;
+            border-radius: 4px;
+            transition: background 0.2s;
         }
         .body-text sup a:hover {
+            background: #c4d8ea;
             text-decoration: underline;
         }
+
+        /* ---- FOOTNOTES ---- */
         .footnotes {
-            background: white;
-            padding: 25px 32px 20px;
-            border-radius: 16px;
-            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
-            border-top: 4px solid #1e4a7a;
+            background: #ffffff;
+            padding: 28px 36px 24px;
+            border-radius: 18px;
+            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.06);
+            border-top: 6px solid #0a2a44;
         }
         .footnotes h2 {
-            font-size: 1.5rem;
-            margin-bottom: 16px;
-            color: #0a1e33;
+            font-size: 1.6rem;
+            color: #0a2a44;
+            border-bottom: 3px solid #f5b041;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            display: inline-block;
         }
         .footnotes ol {
-            padding-left: 24px;
+            padding-left: 26px;
             list-style-type: decimal;
         }
         .footnotes li {
-            margin-bottom: 18px;
+            margin-bottom: 22px;
             padding-left: 6px;
             font-size: 0.98rem;
-            border-bottom: 1px solid #ecf1f7;
-            padding-bottom: 16px;
+            border-bottom: 1px solid #eef3f8;
+            padding-bottom: 18px;
         }
         .footnotes li:last-child {
             border-bottom: none;
             margin-bottom: 0;
+            padding-bottom: 0;
         }
         .footnotes li strong {
             color: #0a4b7a;
@@ -83,55 +138,81 @@
         .footnotes .pronounce {
             color: #3b5f7a;
             font-style: italic;
-            margin-left: 6px;
+            margin-left: 8px;
             font-weight: 400;
         }
         .footnotes .def {
             display: block;
+            margin-top: 4px;
+            color: #1f3a57;
+        }
+        .footnotes .register {
+            display: inline-block;
+            margin-top: 4px;
+            background: #e3ecf5;
+            padding: 2px 14px;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: #0a4b7a;
+        }
+        .footnotes .context {
+            display: block;
             margin-top: 3px;
             color: #1f3a57;
         }
-        .footnotes .syn {
+        .footnotes .alternatives {
             display: block;
-            margin-top: 2px;
+            margin-top: 3px;
             color: #1f3a57;
         }
-        .footnotes .syn strong {
+        .footnotes .alternatives strong {
             color: #0f4b6b;
         }
         .footnotes .example {
             display: block;
-            margin-top: 4px;
+            margin-top: 5px;
             color: #1f3a57;
             font-style: italic;
             background: #f2f6fc;
-            padding: 6px 14px;
-            border-radius: 8px;
+            padding: 8px 16px;
+            border-radius: 10px;
+            border-left: 4px solid #f5b041;
         }
         .footnotes .back-link {
-            margin-left: 12px;
+            margin-left: 14px;
             font-size: 0.9rem;
         }
         .footnotes .back-link a {
             color: #1e4a7a;
             text-decoration: none;
             font-weight: 500;
+            background: #eef3f8;
+            padding: 2px 10px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            transition: background 0.2s;
         }
         .footnotes .back-link a:hover {
+            background: #d4e0ec;
             text-decoration: underline;
         }
-        hr {
-            margin: 30px 0 10px;
-            border: 0;
-            border-top: 2px dashed #dce4ed;
-        }
+
+        /* ---- RESPONSIVE ---- */
         @media (max-width: 600px) {
             body {
                 padding: 0 12px;
                 margin: 20px auto;
             }
+            .page-header {
+                padding: 20px 18px 16px;
+            }
+            .page-header h1 {
+                font-size: 1.5rem;
+            }
             .body-text {
-                padding: 18px 16px;
+                padding: 20px 16px;
+                border-radius: 0 0 12px 12px;
             }
             .footnotes {
                 padding: 18px 16px 14px;
@@ -144,322 +225,332 @@
 </head>
 <body>
 
-    <h1>📘 Business Idioms &amp; Phrasal Verbs</h1>
+    <!-- ===== HEADER ===== -->
+    <header class="page-header">
+        <h1>📘 Business English: Register &amp; Word Choice</h1>
+        <div class="subhead">Real business writing from IBM — with context, register, and usage guidance</div>
+        <div class="context-note">
+            🎯 <strong>For Eloise:</strong> This page focuses on <strong>register</strong> — knowing whether an expression is formal, informal, neutral, or business jargon. Each footnote tells you <strong>when</strong> and <strong>where</strong> to use each word or phrase.
+        </div>
+    </header>
 
-    <!-- ========== BODY TEXT ========== -->
+    <!-- ===== BODY TEXT ===== -->
     <div class="body-text">
+        <div class="article-meta">
+            <strong>Source:</strong> IBM Think Leadership &bull; August 13, 2026 &bull; "Faster Not Better"
+        </div>
 
         <p>
-            I have a good, but stressful and time‑consuming career in widget‑making professional services and I'm
-            <strong id="ref-1">dreaming of going independent<sup><a href="#fn-1">¹</a></sup></strong> as a freelance consultant
-            for widget makers. My
-            <strong id="ref-2">betters<sup><a href="#fn-2">²</a></sup></strong> suggest that before I
-            <strong id="ref-3">leave my current job<sup><a href="#fn-3">³</a></sup></strong>, I should first
-            <strong id="ref-4">build up<sup><a href="#fn-4">⁴</a></sup></strong> a couple of clients with smaller engagements
-            <strong id="ref-5">on the side<sup><a href="#fn-5">⁵</a></sup></strong>. I've never held anything but W‑2 roles, so
-            I'd love the
-            <strong id="ref-6">hivemind's<sup><a href="#fn-6">⁶</a></sup></strong> expertise on
-            <strong id="ref-7">setting myself up for success<sup><a href="#fn-7">⁷</a></sup></strong> as a
-            <strong id="ref-8">salaryman<sup><a href="#fn-8">⁸</a></sup></strong> transitioning into freelancer.
-            <strong id="ref-9">Snowflakes inside.<sup><a href="#fn-9">⁹</a></sup></strong>
+            AI can make your business faster. That doesn't mean better.
         </p>
 
         <p>
-            I've been in my industry for 10+ years and people occasionally ask if I'd freelance for them.
-            Until now I've always said no, because I have a job that takes &gt;60hrs a week and compensates me
-            fine for that effort.
+            For COOs, the real opportunity isn't using AI to speed up old workflows. It's using AI to
+            <strong id="ref-1">redesign<sup><a href="#fn-1">¹</a></sup></strong> work and
+            <strong id="ref-2">reinvest<sup><a href="#fn-2">²</a></sup></strong> the gains in growth.
         </p>
 
         <p>
-            Now, I'm nearly ready to
-            <strong id="ref-10">go it alone<sup><a href="#fn-10">¹⁰</a></sup></strong>. It sounds like I should
-            <strong id="ref-11">take on<sup><a href="#fn-11">¹¹</a></sup></strong> a couple of smaller 5‑10hr a week
-            engagements so that
-            <strong id="ref-12">when/if<sup><a href="#fn-12">¹²</a></sup></strong> I
-            <strong id="ref-3b">leave my current job<sup><a href="#fn-3">³</a></sup></strong> I don't have to
-            <strong id="ref-13">start from zero<sup><a href="#fn-13">¹³</a></sup></strong>.
+            Most companies are using AI to do yesterday's work a little faster: improve productivity, reduce costs,
+            <strong id="ref-3">streamline<sup><a href="#fn-3">³</a></sup></strong> processes and make the business run better.
+            <strong id="ref-15">Operational excellence<sup><a href="#fn-15">¹⁵</a></sup></strong> has always been about helping the company move faster, smarter and more efficiently. But the organizations getting the most from AI aren't treating it solely as a cost reduction tool or another productivity program.
         </p>
 
         <p>
-            I'd love advice for most anything about making the transition successfully, from how to
-            <strong id="ref-14">set up<sup><a href="#fn-14">¹⁴</a></sup></strong> a US business for tax purposes, to
-            <strong id="ref-15">slyly accepting<sup><a href="#fn-15">¹⁵</a></sup></strong> engagements without
-            <strong id="ref-16">ruffling the feathers<sup><a href="#fn-16">¹⁶</a></sup></strong> of my primary job, to the
-            freelancer tricks you use to
-            <strong id="ref-17">succeed<sup><a href="#fn-17">¹⁷</a></sup></strong> in the
-            <strong id="ref-18">early phases<sup><a href="#fn-18">¹⁸</a></sup></strong>.
+            Every hour that AI gives back, every redundant task it
+            <strong id="ref-4">eliminates<sup><a href="#fn-4">⁴</a></sup></strong> and every decision it
+            <strong id="ref-5">accelerates<sup><a href="#fn-5">⁵</a></sup></strong> creates momentum for something bigger. Better customer experiences. New business models. New sources of growth. The operational improvements
+            <strong id="ref-6">fund<sup><a href="#fn-6">⁶</a></sup></strong> innovation. Innovation
+            <strong id="ref-7">drives<sup><a href="#fn-7">⁷</a></sup></strong> growth. Growth
+            <strong id="ref-8">creates<sup><a href="#fn-8">⁸</a></sup></strong> resources for the next round of transformation.
         </p>
 
         <p>
-            If
-            <strong id="ref-19">all goes well<sup><a href="#fn-19">¹⁹</a></sup></strong>, in the next 3‑9 months I would like
-            to be freelancing full time. Perhaps
-            <strong id="ref-20">naively<sup><a href="#fn-20">²⁰</a></sup></strong>, I feel pretty good about my ability to
-            <strong id="ref-21">operate<sup><a href="#fn-21">²¹</a></sup></strong> as a fulltime freelancer (find clients,
-            <strong id="ref-22">negotiate<sup><a href="#fn-22">²²</a></sup></strong> a reasonable scope, do good work for them,
-            <strong id="ref-23">invoice<sup><a href="#fn-23">²³</a></sup></strong> them correctly, etc.), but less confident
-            in my ability to
-            <strong id="ref-24">navigate<sup><a href="#fn-24">²⁴</a></sup></strong> and
-            <strong id="ref-21b">operate<sup><a href="#fn-21">²¹</a></sup></strong> while
-            <strong id="ref-25">maintaining<sup><a href="#fn-25">²⁵</a></sup></strong> my full time role. Any and all advice is
-            appreciated!
+            But, too often, companies apply AI to workflows that haven't been fundamentally
+            <strong id="ref-9">examined<sup><a href="#fn-9">⁹</a></sup></strong> in years. They use AI to generate reports that nobody reads. They automate approval chains that already involve too many people. They
+            <strong id="ref-10">layer<sup><a href="#fn-10">¹⁰</a></sup></strong> AI on top of processes that were already frustrating employees and customers. The result isn't transformation. It's just faster complexity.
         </p>
 
+        <p>
+            <strong id="ref-16">"Stop optimizing what exists."<sup><a href="#fn-16">¹⁶</a></sup></strong> — Yogi Goyal, IBM Consulting
+        </p>
+
+        <h3 style="margin-top: 24px; color: #0a2a44; font-size: 1.1rem;">Stop automating work that should disappear</h3>
+
+        <p>
+            First, <strong id="ref-4b">eliminate<sup><a href="#fn-4">⁴</a></sup></strong> process steps that no longer add value. Then <strong id="ref-4c">automate</strong> the redesigned processes. <strong id="ref-4d">Standardize</strong> what remains. Finally, <strong id="ref-2b">reinvest<sup><a href="#fn-2">²</a></sup></strong> the gains into future growth.
+        </p>
+
+        <p>
+            Too many organizations automate what they should have eliminated. They put AI on top of
+            <strong id="ref-17">broken workflows<sup><a href="#fn-17">¹⁷</a></sup></strong> and end up
+            <strong id="ref-11">scaling inefficiency<sup><a href="#fn-11">¹¹</a></sup></strong>. The sequence matters: eliminate the waste, automate the work that remains, standardize it across the enterprise and then reinvest the gains into innovation.
+        </p>
+
+        <h4 style="margin-top: 20px; color: #0a2a44; font-size: 1rem;">The hardest part of AI is EASY</h4>
+
+        <p>
+            <strong>1. Eliminate</strong><br />
+            The first step is deciding what work should disappear altogether. Too many companies start by layering AI onto existing processes. These inefficiencies survive simply because
+            <strong id="ref-12">"that's the way it's always been done."<sup><a href="#fn-12">¹²</a></sup></strong> The real opportunity isn't to make old processes faster. It's to ask whether they would exist at all if you were designing the company today.
+        </p>
+
+        <p>
+            <strong>2. Automate</strong><br />
+            Once you've eliminated unnecessary work, then you move to automation. It's no longer just about automating repetitive tasks. AI can analyze thousands of customer interactions overnight, draft executive-ready summaries before you get to work, and
+            <strong id="ref-13">surface<sup><a href="#fn-13">¹³</a></sup></strong> operational risks before your company even recognizes a problem is emerging.
+        </p>
+
+        <p>
+            <strong>3. Standardize</strong><br />
+            AI won't scale in operational chaos. Enterprise-wide AI may be the goal, but in organizations where the same metric has five different definitions, customer data lives in a dozen systems and every department follows its own process, AI ends up
+            <strong id="ref-14">trapped<sup><a href="#fn-14">¹⁴</a></sup></strong> in isolated pilots. Consistent data structures, common terminology,
+            <strong id="ref-18">shared governance<sup><a href="#fn-18">¹⁸</a></sup></strong> and standardized workflows create the foundation that AI needs to operate across departmental boundaries.
+        </p>
+
+        <p>
+            <strong>4. Yield</strong><br />
+            The real question isn't how many hours AI saved — it's how much more capable is your organization.
+        </p>
     </div>
 
-    <!-- ========== FOOTNOTES ========== -->
+    <!-- ===== FOOTNOTES ===== -->
     <div class="footnotes">
         <h2>📝 Footnotes</h2>
         <ol>
 
             <!-- 1 -->
             <li id="fn-1">
-                <strong>dreaming of going independent</strong>
-                <span class="pronounce">(DREE-ming uv GOH-ing in-dee-PEN-dent)</span>
-                <span class="def">Imagining or planning to leave a job and work for oneself as a freelancer or business owner.</span>
-                <span class="syn"><strong>Synonyms:</strong> <strong>aspiring to</strong>, <strong>envisioning</strong></span>
-                <span class="example"><em>Example:</em> She's been dreaming of going independent for years, and now she's finally saving up to do it.</span>
+                <strong>redesign</strong>
+                <span class="pronounce">(ree-di-ZYNE)</span>
+                <span class="def">To design something again in a different way.</span>
+                <span class="register">⚡ Register: Neutral / Professional</span>
+                <span class="context"><strong>Best used in:</strong> Business strategy discussions, project planning, reports.</span>
+                <span class="context"><strong>Avoid in:</strong> Casual conversation — it sounds too formal.</span>
+                <span class="alternatives"><strong>Alternatives:</strong> <strong>rethink</strong> (less formal), <strong>revamp</strong> (informal), <strong>reconceptualize</strong> (more academic).</span>
+                <span class="example"><em>Example:</em> We need to redesign our customer onboarding process to reduce friction.</span>
                 <span class="back-link"><a href="#ref-1">↩ back to text</a></span>
             </li>
 
             <!-- 2 -->
             <li id="fn-2">
-                <strong>betters</strong>
-                <span class="pronounce">(BET-erz)</span>
-                <span class="def">People who are more experienced, older, or in a higher position than you; superiors.</span>
-                <span class="syn"><strong>Synonyms:</strong> <strong>superiors</strong>, <strong>elders</strong></span>
-                <span class="example"><em>Example:</em> My betters at the firm advised me to wait before asking for a promotion.</span>
+                <strong>reinvest</strong>
+                <span class="pronounce">(ree-in-VEST)</span>
+                <span class="def">To put money or resources back into something to generate future returns.</span>
+                <span class="register">⚡ Register: Formal / Business</span>
+                <span class="context"><strong>Best used in:</strong> Financial reports, board presentations, growth strategy meetings.</span>
+                <span class="context"><strong>Avoid in:</strong> Casual conversation — sounds too corporate.</span>
+                <span class="alternatives"><strong>Alternatives:</strong> <strong>reallocate</strong>, <strong>plow back</strong> (informal).</span>
+                <span class="example"><em>Example:</em> We plan to reinvest our profits into R&amp;D for new product lines.</span>
                 <span class="back-link"><a href="#ref-2">↩ back to text</a></span>
             </li>
 
             <!-- 3 -->
             <li id="fn-3">
-                <strong>leave my current job</strong>
-                <span class="pronounce">(LEEV my KUR-ent job)</span>
-                <span class="def">To quit or resign from the position you are in right now.</span>
-                <span class="syn"><strong>Synonyms:</strong> <strong>quit</strong>, <strong>resign from</strong></span>
-                <span class="example"><em>Example:</em> Before I leave my current job, I want to make sure I have another offer lined up.</span>
+                <strong>streamline</strong>
+                <span class="pronounce">(STREEM-line)</span>
+                <span class="def">To make a process more efficient by removing unnecessary steps.</span>
+                <span class="register">⚡ Register: Neutral / Professional</span>
+                <span class="context"><strong>Best used in:</strong> Operations meetings, process improvement discussions, internal emails.</span>
+                <span class="context"><strong>Avoid in:</strong> Casual conversation — it sounds like office jargon.</span>
+                <span class="alternatives"><strong>Alternatives:</strong> <strong>simplify</strong>, <strong>make more efficient</strong>.</span>
+                <span class="example"><em>Example:</em> We need to streamline our approval process so projects move faster.</span>
                 <span class="back-link"><a href="#ref-3">↩ back to text</a></span>
             </li>
 
             <!-- 4 -->
             <li id="fn-4">
-                <strong>build up</strong>
-                <span class="pronounce">(BILD up)</span>
-                <span class="def">To gradually develop or increase something over time.</span>
-                <span class="syn"><strong>Synonyms:</strong> <strong>develop</strong>, <strong>accumulate</strong></span>
-                <span class="example"><em>Example:</em> He's trying to build up his client base before leaving his full-time job.</span>
+                <strong>eliminate</strong>
+                <span class="pronounce">(ih-LIM-in-ayt)</span>
+                <span class="def">To completely remove or get rid of something.</span>
+                <span class="register">⚡ Register: Neutral / Formal</span>
+                <span class="context"><strong>Best used in:</strong> Strategy documents, operational planning, improvement initiatives.</span>
+                <span class="context"><strong>Avoid in:</strong> Casual conversation — it can sound harsh or overly serious.</span>
+                <span class="alternatives"><strong>Alternatives:</strong> <strong>cut</strong> (less formal), <strong>remove</strong>, <strong>phase out</strong>.</span>
+                <span class="example"><em>Example:</em> We should eliminate any steps in the process that don't add value for the customer.</span>
                 <span class="back-link"><a href="#ref-4">↩ back to text</a></span>
             </li>
 
             <!-- 5 -->
             <li id="fn-5">
-                <strong>on the side</strong>
-                <span class="pronounce">(on thuh SIDE)</span>
-                <span class="def">In addition to one's main job or activity; as a secondary pursuit.</span>
-                <span class="syn"><strong>Synonyms:</strong> <strong>in addition</strong>, <strong>as a sideline</strong></span>
-                <span class="example"><em>Example:</em> She does freelance consulting on the side while working her 9-to-5 job.</span>
+                <strong>accelerates</strong>
+                <span class="pronounce">(ak-SEL-er-ayts)</span>
+                <span class="def">To make something happen faster or more quickly.</span>
+                <span class="register">⚡ Register: Neutral / Formal</span>
+                <span class="context"><strong>Best used in:</strong> Performance reviews, project updates, strategy discussions.</span>
+                <span class="context"><strong>Avoid in:</strong> Everyday conversation — it can sound like corporate buzzword.</span>
+                <span class="alternatives"><strong>Alternatives:</strong> <strong>speeds up</strong> (informal), <strong>fast-tracks</strong> (business jargon).</span>
+                <span class="example"><em>Example:</em> Good data management accelerates our ability to make informed decisions.</span>
                 <span class="back-link"><a href="#ref-5">↩ back to text</a></span>
             </li>
 
             <!-- 6 -->
             <li id="fn-6">
-                <strong>hivemind</strong>
-                <span class="pronounce">(HIV-mynd)</span>
-                <span class="def">A collective intelligence or shared knowledge of a group; the combined wisdom of many people.</span>
-                <span class="syn"><strong>Synonyms:</strong> <strong>collective wisdom</strong>, <strong>crowd intelligence</strong></span>
-                <span class="example"><em>Example:</em> I asked the hivemind on the forum for advice on starting my own business.</span>
+                <strong>fund</strong>
+                <span class="pronounce">(fuhnd)</span>
+                <span class="def">To provide money or resources for a project or initiative.</span>
+                <span class="register">⚡ Register: Neutral / Business</span>
+                <span class="context"><strong>Best used in:</strong> Budget discussions, project proposals, financial reports.</span>
+                <span class="context"><strong>Avoid in:</strong> Casual conversation — sounds too financial.</span>
+                <span class="alternatives"><strong>Alternatives:</strong> <strong>finance</strong>, <strong>support</strong>, <strong>pay for</strong> (informal).</span>
+                <span class="example"><em>Example:</em> The profits from our core business fund new product development.</span>
                 <span class="back-link"><a href="#ref-6">↩ back to text</a></span>
             </li>
 
             <!-- 7 -->
             <li id="fn-7">
-                <strong>setting myself up for success</strong>
-                <span class="pronounce">(SET-ing my-SELF up for suk-SES)</span>
-                <span class="def">Preparing and organizing things so that one is likely to achieve a good outcome.</span>
-                <span class="syn"><strong>Synonyms:</strong> <strong>positioning myself</strong>, <strong>preparing</strong></span>
-                <span class="example"><em>Example:</em> By saving money and building skills now, I'm setting myself up for success when I go freelance.</span>
+                <strong>drives</strong>
+                <span class="pronounce">(dryvz)</span>
+                <span class="def">To be the main force that causes something to happen or progress.</span>
+                <span class="register">⚡ Register: Neutral / Business</span>
+                <span class="context"><strong>Best used in:</strong> Strategy discussions, marketing copy, internal communications.</span>
+                <span class="context"><strong>Avoid in:</strong> Overusing in formal writing — it's a business buzzword.</span>
+                <span class="alternatives"><strong>Alternatives:</strong> <strong>fuels</strong>, <strong>powers</strong>, <strong>propels</strong>.</span>
+                <span class="example"><em>Example:</em> Customer satisfaction drives long-term business growth.</span>
                 <span class="back-link"><a href="#ref-7">↩ back to text</a></span>
             </li>
 
             <!-- 8 -->
             <li id="fn-8">
-                <strong>salaryman</strong>
-                <span class="pronounce">(SAL-uh-ree-man)</span>
-                <span class="def">A Japanese term for a white-collar office worker who is loyal to their company; often used more broadly for any full-time corporate employee.</span>
-                <span class="syn"><strong>Synonyms:</strong> <strong>corporate employee</strong>, <strong>company man</strong></span>
-                <span class="example"><em>Example:</em> After 15 years as a salaryman, he decided to quit and start his own business.</span>
+                <strong>creates</strong>
+                <span class="pronounce">(kree-AYTS)</span>
+                <span class="def">To bring something into existence.</span>
+                <span class="register">⚡ Register: Neutral (everyday)</span>
+                <span class="context"><strong>Best used in:</strong> Almost any context — formal, informal, spoken, written.</span>
+                <span class="context"><strong>Avoid in:</strong> No specific avoidance — this is a safe, universal word.</span>
+                <span class="alternatives"><strong>Alternatives:</strong> <strong>generates</strong>, <strong>produces</strong>, <strong>builds</strong>.</span>
+                <span class="example"><em>Example:</em> A positive company culture creates a more productive work environment.</span>
                 <span class="back-link"><a href="#ref-8">↩ back to text</a></span>
             </li>
 
             <!-- 9 -->
             <li id="fn-9">
-                <strong>Snowflakes inside</strong>
-                <span class="pronounce">(SNOH-flayks in-SYDE)</span>
-                <span class="def">A playful or self‑deprecating phrase meaning "special circumstances" or "things that are not obvious from the outside."</span>
-                <span class="syn"><strong>Synonyms:</strong> <strong>context matters</strong>, <strong>unique situation</strong></span>
-                <span class="example"><em>Example:</em> I know it sounds simple, but snowflakes inside — every case is different.</span>
+                <strong>examined</strong>
+                <span class="pronounce">(eg-ZAM-ind)</span>
+                <span class="def">To have been inspected, analyzed, or reviewed carefully.</span>
+                <span class="register">⚡ Register: Formal</span>
+                <span class="context"><strong>Best used in:</strong> Reports, audits, academic writing, official documents.</span>
+                <span class="context"><strong>Avoid in:</strong> Casual conversation — sounds too stiff or academic.</span>
+                <span class="alternatives"><strong>Alternatives:</strong> <strong>looked at</strong> (informal), <strong>reviewed</strong> (neutral), <strong>analyzed</strong> (formal).</span>
+                <span class="example"><em>Example:</em> The board examined the financial records before approving the budget.</span>
                 <span class="back-link"><a href="#ref-9">↩ back to text</a></span>
             </li>
 
             <!-- 10 -->
             <li id="fn-10">
-                <strong>go it alone</strong>
-                <span class="pronounce">(GOH it uh-LONE)</span>
-                <span class="def">To do something without help from others; to start a business or project independently.</span>
-                <span class="syn"><strong>Synonyms:</strong> <strong>solo</strong>, <strong>fly solo</strong></span>
-                <span class="example"><em>Example:</em> After years of working for others, he's finally ready to go it alone as a freelancer.</span>
+                <strong>layer</strong> (as verb)
+                <span class="pronounce">(LAY-er)</span>
+                <span class="def">To add something on top of an existing thing, often making it more complex.</span>
+                <span class="register">⚡ Register: Informal / Technical</span>
+                <span class="context"><strong>Best used in:</strong> IT discussions, process improvement conversations, internal team chats.</span>
+                <span class="context"><strong>Avoid in:</strong> Formal reports or client presentations — it's too casual.</span>
+                <span class="alternatives"><strong>Alternatives:</strong> <strong>add</strong>, <strong>superimpose</strong> (formal).</span>
+                <span class="example"><em>Example:</em> We keep layering new software on top of old systems instead of replacing them.</span>
                 <span class="back-link"><a href="#ref-10">↩ back to text</a></span>
             </li>
 
             <!-- 11 -->
             <li id="fn-11">
-                <strong>take on</strong>
-                <span class="pronounce">(TAYK on)</span>
-                <span class="def">To accept or agree to do something; to assume responsibility for a task.</span>
-                <span class="syn"><strong>Synonyms:</strong> <strong>accept</strong>, <strong>undertake</strong></span>
-                <span class="example"><em>Example:</em> I'm not ready to take on a big project yet — I'll start with small ones.</span>
+                <strong>scaling inefficiency</strong>
+                <span class="pronounce">(SKAYL-ing in-ih-FISH-en-see)</span>
+                <span class="def">When inefficient processes are expanded across an entire organization, making the problem bigger.</span>
+                <span class="register">⚡ Register: Business jargon</span>
+                <span class="context"><strong>Best used in:</strong> Operations reviews, management consulting, strategy meetings.</span>
+                <span class="context"><strong>Avoid in:</strong> Casual conversation or external communications — it's insider jargon.</span>
+                <span class="alternatives"><strong>Alternatives:</strong> <strong>spreading inefficiency</strong>, <strong>multiplying problems</strong>.</span>
+                <span class="example"><em>Example:</em> By automating broken processes, we're just scaling inefficiency across the company.</span>
                 <span class="back-link"><a href="#ref-11">↩ back to text</a></span>
             </li>
 
             <!-- 12 -->
             <li id="fn-12">
-                <strong>when/if</strong>
-                <span class="pronounce">(WEN if)</span>
-                <span class="def">A cautious way of saying "if and when" — used when something is possible but not certain.</span>
-                <span class="syn"><strong>Synonyms:</strong> <strong>if and when</strong>, <strong>should</strong></span>
-                <span class="example"><em>Example:</em> When/if I get the promotion, I'll have to move to a new city.</span>
+                <strong>"that's the way it's always been done"</strong>
+                <span class="pronounce">(THATS thuh way its AL-weez been DUHN)</span>
+                <span class="def">A phrase used to justify continuing old habits or traditions, often without questioning them.</span>
+                <span class="register">⚡ Register: Informal / Idiomatic</span>
+                <span class="context"><strong>Best used in:</strong> Internal conversations, meetings about change, team discussions.</span>
+                <span class="context"><strong>Avoid in:</strong> Formal documents, client presentations — it sounds too casual and unprofessional.</span>
+                <span class="alternatives"><strong>Alternatives:</strong> <strong>business as usual</strong>, <strong>our existing process</strong>.</span>
+                <span class="example"><em>Example:</em> When I asked why we still do it, they said, "That's the way it's always been done."</span>
                 <span class="back-link"><a href="#ref-12">↩ back to text</a></span>
             </li>
 
             <!-- 13 -->
             <li id="fn-13">
-                <strong>start from zero</strong>
-                <span class="pronounce">(START from ZEE-roh)</span>
-                <span class="def">To begin with nothing; to have no existing clients, resources, or advantages.</span>
-                <span class="syn"><strong>Synonyms:</strong> <strong>from scratch</strong>, <strong>from the ground up</strong></span>
-                <span class="example"><em>Example:</em> I don't want to start from zero when I leave my job — that's why I'm building clients now.</span>
+                <strong>surface</strong> (as verb)
+                <span class="pronounce">(SUR-fis)</span>
+                <span class="def">To bring something to attention; to make something visible that was previously hidden.</span>
+                <span class="register">⚡ Register: Neutral / Professional</span>
+                <span class="context"><strong>Best used in:</strong> Business meetings, data analysis discussions, strategy sessions.</span>
+                <span class="context"><strong>Avoid in:</strong> Casual conversation — it's tech/business jargon.</span>
+                <span class="alternatives"><strong>Alternatives:</strong> <strong>uncover</strong>, <strong>bring up</strong> (informal), <strong>highlight</strong>.</span>
+                <span class="example"><em>Example:</em> The new dashboard surfaces trends that we couldn't see before.</span>
                 <span class="back-link"><a href="#ref-13">↩ back to text</a></span>
             </li>
 
             <!-- 14 -->
             <li id="fn-14">
-                <strong>set up</strong>
-                <span class="pronounce">(SET up)</span>
-                <span class="def">To establish or arrange something, like a business, system, or process.</span>
-                <span class="syn"><strong>Synonyms:</strong> <strong>establish</strong>, <strong>arrange</strong></span>
-                <span class="example"><em>Example:</em> I need to set up my LLC before I can start invoicing clients.</span>
+                <strong>trapped</strong>
+                <span class="pronounce">(trapt)</span>
+                <span class="def">Stuck or unable to move forward; contained in a limited space.</span>
+                <span class="register">⚡ Register: Neutral / Informal</span>
+                <span class="context"><strong>Best used in:</strong> Team discussions, internal emails, problem-solving conversations.</span>
+                <span class="context"><strong>Avoid in:</strong> Formal reports — sounds too emotional.</span>
+                <span class="alternatives"><strong>Alternatives:</strong> <strong>stuck</strong>, <strong>confined</strong>, <strong>limited</strong>.</span>
+                <span class="example"><em>Example:</em> Our AI pilots are trapped in isolated departments and never scale company-wide.</span>
                 <span class="back-link"><a href="#ref-14">↩ back to text</a></span>
             </li>
 
             <!-- 15 -->
             <li id="fn-15">
-                <strong>slyly accepting</strong>
-                <span class="pronounce">(SLY-lee ak-SEP-ting)</span>
-                <span class="def">Taking on work in a quiet, discreet way — often without making it obvious to your employer.</span>
-                <span class="syn"><strong>Synonyms:</strong> <strong>quietly taking</strong>, <strong>discreetly agreeing</strong></span>
-                <span class="example"><em>Example:</em> He's slyly accepting small freelance gigs while still working his day job.</span>
+                <strong>operational excellence</strong>
+                <span class="pronounce">(op-er-AY-shun-al EK-sel-ens)</span>
+                <span class="def">A management philosophy focused on continuously improving operations and eliminating waste.</span>
+                <span class="register">⚡ Register: Formal / Business jargon</span>
+                <span class="context"><strong>Best used in:</strong> Strategy documents, management meetings, consulting presentations.</span>
+                <span class="context"><strong>Avoid in:</strong> Casual conversation or external marketing — it's insider jargon.</span>
+                <span class="alternatives"><strong>Alternatives:</strong> <strong>process excellence</strong>, <strong>operational efficiency</strong>.</span>
+                <span class="example"><em>Example:</em> Our operational excellence program helped us reduce costs by 15% last year.</span>
                 <span class="back-link"><a href="#ref-15">↩ back to text</a></span>
             </li>
 
             <!-- 16 -->
             <li id="fn-16">
-                <strong>ruffling the feathers</strong>
-                <span class="pronounce">(RUF-ling thuh FETH-erz)</span>
-                <span class="def">To upset, annoy, or disturb someone — especially those in authority.</span>
-                <span class="syn"><strong>Synonyms:</strong> <strong>upsetting</strong>, <strong>irritating</strong></span>
-                <span class="example"><em>Example:</em> I don't want to ruffle the feathers of my boss by asking for time off to freelance.</span>
+                <strong>"Stop optimizing what exists"</strong>
+                <span class="pronounce">(STOP OP-tim-ize-ing wut eg-ZISTS)</span>
+                <span class="def">A business mantra encouraging leaders to rethink existing processes rather than just improve them.</span>
+                <span class="register">⚡ Register: Command phrase / Business mantra</span>
+                <span class="context"><strong>Best used in:</strong> Leadership communication, transformation initiatives, strategy meetings.</span>
+                <span class="context"><strong>Avoid in:</strong> Casual conversation — it's too directive and "management-speak."</span>
+                <span class="alternatives"><strong>Alternatives:</strong> <strong>Don't just improve — reimagine</strong>, <strong>Challenge your assumptions</strong>.</span>
+                <span class="example"><em>Example:</em> Our CEO's message was clear: stop optimizing what exists and start building what's next.</span>
                 <span class="back-link"><a href="#ref-16">↩ back to text</a></span>
             </li>
 
             <!-- 17 -->
             <li id="fn-17">
-                <strong>succeed</strong>
-                <span class="pronounce">(suk-SEED)</span>
-                <span class="def">To achieve a goal or get the desired result.</span>
-                <span class="syn"><strong>Synonyms:</strong> <strong>prosper</strong>, <strong>thrive</strong></span>
-                <span class="example"><em>Example:</em> To succeed as a freelancer, you need good clients and steady work.</span>
+                <strong>broken workflows</strong>
+                <span class="pronounce">(BROH-ken WURK-flohz)</span>
+                <span class="def">Inefficient or dysfunctional processes that waste time and resources.</span>
+                <span class="register">⚡ Register: Informal / Business</span>
+                <span class="context"><strong>Best used in:</strong> Internal team discussions, process improvement, operational reviews.</span>
+                <span class="context"><strong>Avoid in:</strong> Client communications or formal documents — sounds too blunt.</span>
+                <span class="alternatives"><strong>Alternatives:</strong> <strong>inefficient processes</strong>, <strong>dysfunctional systems</strong>.</span>
+                <span class="example"><em>Example:</em> Before automating, we need to fix the broken workflows that are causing delays.</span>
                 <span class="back-link"><a href="#ref-17">↩ back to text</a></span>
             </li>
 
             <!-- 18 -->
             <li id="fn-18">
-                <strong>early phases</strong>
-                <span class="pronounce">(ER-lee FAYZ-ez)</span>
-                <span class="def">The first stages of a process or period of time.</span>
-                <span class="syn"><strong>Synonyms:</strong> <strong>initial stages</strong>, <strong>beginning</strong></span>
-                <span class="example"><em>Example:</em> In the early phases of freelancing, you have to accept lower-paying work to build a portfolio.</span>
+                <strong>shared governance</strong>
+                <span class="pronounce">(SHAIRD GUV-er-nens)</span>
+                <span class="def">A system where decision-making authority is distributed among multiple stakeholders or departments.</span>
+                <span class="register">⚡ Register: Formal / Business</span>
+                <span class="context"><strong>Best used in:</strong> Organizational design, leadership discussions, policy documents.</span>
+                <span class="context"><strong>Avoid in:</strong> Casual conversation — highly formal and academic-sounding.</span>
+                <span class="alternatives"><strong>Alternatives:</strong> <strong>collaborative decision-making</strong>, <strong>distributed authority</strong>.</span>
+                <span class="example"><em>Example:</em> We need shared governance to ensure all departments have input on data standards.</span>
                 <span class="back-link"><a href="#ref-18">↩ back to text</a></span>
-            </li>
-
-            <!-- 19 -->
-            <li id="fn-19">
-                <strong>all goes well</strong>
-                <span class="pronounce">(awl GOHZ wel)</span>
-                <span class="def">If everything happens as planned; if there are no problems.</span>
-                <span class="syn"><strong>Synonyms:</strong> <strong>if everything works out</strong>, <strong>best case</strong></span>
-                <span class="example"><em>Example:</em> If all goes well, I'll be freelancing full-time by next summer.</span>
-                <span class="back-link"><a href="#ref-19">↩ back to text</a></span>
-            </li>
-
-            <!-- 20 -->
-            <li id="fn-20">
-                <strong>naively</strong>
-                <span class="pronounce">(nah-EEV-lee)</span>
-                <span class="def">In a way that shows a lack of experience or practical knowledge; too optimistic.</span>
-                <span class="syn"><strong>Synonyms:</strong> <strong>optimistically</strong>, <strong>idealistically</strong></span>
-                <span class="example"><em>Example:</em> Naively, I thought freelancing would be easy — now I know it takes hard work.</span>
-                <span class="back-link"><a href="#ref-20">↩ back to text</a></span>
-            </li>
-
-            <!-- 21 -->
-            <li id="fn-21">
-                <strong>operate</strong>
-                <span class="pronounce">(OP-er-ayt)</span>
-                <span class="def">To function or work in a particular way; to carry on business activities.</span>
-                <span class="syn"><strong>Synonyms:</strong> <strong>function</strong>, <strong>run</strong></span>
-                <span class="example"><em>Example:</em> She's learned how to operate as a freelancer without losing her work-life balance.</span>
-                <span class="back-link"><a href="#ref-21">↩ back to text</a></span>
-            </li>
-
-            <!-- 22 -->
-            <li id="fn-22">
-                <strong>negotiate</strong>
-                <span class="pronounce">(ne-GOH-shee-ayt)</span>
-                <span class="def">To discuss terms and reach an agreement, especially about price or conditions.</span>
-                <span class="syn"><strong>Synonyms:</strong> <strong>bargain</strong>, <strong>haggle</strong></span>
-                <span class="example"><em>Example:</em> You should always negotiate your rates before signing a contract.</span>
-                <span class="back-link"><a href="#ref-22">↩ back to text</a></span>
-            </li>
-
-            <!-- 23 -->
-            <li id="fn-23">
-                <strong>invoice</strong>
-                <span class="pronounce">(IN-vois)</span>
-                <span class="def">To send a bill to a client for work done; also used as a noun for the bill itself.</span>
-                <span class="syn"><strong>Synonyms:</strong> <strong>bill</strong>, <strong>charge</strong></span>
-                <span class="example"><em>Example:</em> I invoice my clients at the end of every month for the work I've done.</span>
-                <span class="back-link"><a href="#ref-23">↩ back to text</a></span>
-            </li>
-
-            <!-- 24 -->
-            <li id="fn-24">
-                <strong>navigate</strong>
-                <span class="pronounce">(NAV-ih-gayt)</span>
-                <span class="def">To carefully manage or steer through a complex or difficult situation.</span>
-                <span class="syn"><strong>Synonyms:</strong> <strong>steer</strong>, <strong>maneuver</strong></span>
-                <span class="example"><em>Example:</em> He's good at navigating tricky conversations with difficult clients.</span>
-                <span class="back-link"><a href="#ref-24">↩ back to text</a></span>
-            </li>
-
-            <!-- 25 -->
-            <li id="fn-25">
-                <strong>maintaining</strong>
-                <span class="pronounce">(mayn-TAY-ning)</span>
-                <span class="def">Keeping something in good condition; continuing to manage or preserve something.</span>
-                <span class="syn"><strong>Synonyms:</strong> <strong>sustaining</strong>, <strong>keeping up</strong></span>
-                <span class="example"><em>Example:</em> Maintaining a full-time job while freelancing on the side is a real challenge.</span>
-                <span class="back-link"><a href="#ref-25">↩ back to text</a></span>
             </li>
 
         </ol>
