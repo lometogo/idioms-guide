@@ -31,10 +31,10 @@ words.forEach((d,i)=>{const s=document.createElement('div');s.className='scene';
  s.innerHTML=`<div class="count">${i+1} / 4</div><div class="word">${d.w}</div><div class="pron">${d.p}</div><div class="badge">⚡ ${d.r}</div>
  <div class="row"><b>Best used in:</b> ${d.u}</div><div class="row"><b>Alternatives:</b> ${d.a}</div><div class="ex">“${d.e}”</div>`;cards.appendChild(s)});
 // timeline: [element, start, end] seconds
-const T=[['s0',0,4],['s1',4,8],['c0',8,13.5],['c1',13.5,19],['c2',19,24.5],['c3',24.5,30],['s6',30,35]];
-const TOTAL=35, F=0.6;
+let T=[['s0',0,4],['s1',4,8],['c0',8,13.5],['c1',13.5,19],['c2',19,24.5],['c3',24.5,30],['s6',30,35]];
+let TOTAL=35; const F=0.6;
 const ease=x=>x<0?0:x>1?1:1-Math.pow(1-x,3);
-window.TOTAL=TOTAL;
+window.setTimeline=(t,total)=>{T=t;TOTAL=total;window.TOTAL=total;};window.TOTAL=TOTAL;
 window.render=t=>{
  T.forEach(([id,a,b])=>{const el=document.getElementById(id);
   const i=ease((t-a)/F), o=b===TOTAL?1:1-ease((t-(b-F))/F);
