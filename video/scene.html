@@ -1,0 +1,46 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1280px;height:720px;overflow:hidden;font-family:'Segoe UI',Roboto,Arial,sans-serif;background:#0a2a44;color:#fff;position:relative}
+.scene{position:absolute;inset:0;padding:70px 90px;opacity:0}
+.bar{position:absolute;left:0;right:0;bottom:0;height:10px;background:#f5b041;transform-origin:left}
+.center{display:flex;flex-direction:column;justify-content:center;height:100%}
+h1{font-size:76px;line-height:1.1}
+.sub{font-size:32px;color:#bfd7f0;margin-top:22px}
+.accent{color:#f5b041}
+.word{font-size:110px;font-weight:700}
+.pron{font-size:34px;color:#bfd7f0;margin-top:4px}
+.badge{display:inline-block;margin-top:26px;padding:10px 26px;border-radius:40px;background:#f5b041;color:#0a2a44;font-size:32px;font-weight:700}
+.row{font-size:32px;margin-top:22px;color:#d4e4f5}
+.row b{color:#f5b041}
+.ex{margin-top:30px;padding:20px 28px;border-left:6px solid #f5b041;background:rgba(255,255,255,.08);font-size:30px;font-style:italic;border-radius:0 10px 10px 0}
+.count{position:absolute;right:90px;top:60px;font-size:28px;color:#6f8aa5}
+</style></head><body>
+<div class="scene" id="s0"><div class="center"><h1>Do you know your <span class="accent">register</span>?</h1><div class="sub">Business English: Register &amp; Word Choice</div></div></div>
+<div class="scene" id="s1"><div class="center"><h1>Same idea.<br>Different <span class="accent">tone</span>.</h1><div class="sub">Formal · Neutral · Informal · Jargon</div></div></div>
+<div id="cards"></div>
+<div class="scene" id="s6"><div class="center"><h1>Choose the word<br>that fits the <span class="accent">room</span>.</h1><div class="sub">Full guide with 18 footnotes → idioms-guide</div></div></div>
+<div class="bar" id="bar"></div>
+<script>
+const words=[
+ {w:'redesign',p:'ree-di-ZYNE',r:'Neutral / Professional',u:'Strategy discussions, project planning, reports',a:'rethink (less formal), revamp (informal)',e:'We need to redesign our customer onboarding process.'},
+ {w:'reinvest',p:'ree-in-VEST',r:'Formal / Business',u:'Financial reports, board presentations',a:'reallocate, plow back (informal)',e:'We plan to reinvest our profits into R&D.'},
+ {w:'streamline',p:'STREEM-line',r:'Neutral / Professional',u:'Operations meetings, internal emails',a:'simplify, make more efficient',e:'We need to streamline our approval process.'},
+ {w:'eliminate',p:'ih-LIM-in-ayt',r:'Neutral / Formal',u:'Strategy documents, operational planning',a:'cut (less formal), remove, phase out',e:'We should eliminate steps that add no value.'}];
+const cards=document.getElementById('cards');
+words.forEach((d,i)=>{const s=document.createElement('div');s.className='scene';s.id='c'+i;
+ s.innerHTML=`<div class="count">${i+1} / 4</div><div class="word">${d.w}</div><div class="pron">${d.p}</div><div class="badge">⚡ ${d.r}</div>
+ <div class="row"><b>Best used in:</b> ${d.u}</div><div class="row"><b>Alternatives:</b> ${d.a}</div><div class="ex">“${d.e}”</div>`;cards.appendChild(s)});
+// timeline: [element, start, end] seconds
+const T=[['s0',0,4],['s1',4,8],['c0',8,13.5],['c1',13.5,19],['c2',19,24.5],['c3',24.5,30],['s6',30,35]];
+const TOTAL=35, F=0.6;
+const ease=x=>x<0?0:x>1?1:1-Math.pow(1-x,3);
+window.TOTAL=TOTAL;
+window.render=t=>{
+ T.forEach(([id,a,b])=>{const el=document.getElementById(id);
+  const i=ease((t-a)/F), o=b===TOTAL?1:1-ease((t-(b-F))/F);
+  el.style.opacity=(t>=a&&t<b)?Math.min(i,o):0;
+  el.style.transform=`translateY(${(1-i)*30}px)`;});
+ document.getElementById('bar').style.transform=`scaleX(${t/TOTAL})`;
+};
+render(0);
+</script></body></html>
